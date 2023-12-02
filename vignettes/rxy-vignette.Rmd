@@ -1,0 +1,20 @@
+---
+title: "rxy-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{rxy-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+library(rxy)
+```
+
+```{r setup, fig.dim = c(6, 4)}
+library(MASS)
+results <- ryx(Boston, y="medv")
+print(results)
+summary(results)
+plot(results)
+```
